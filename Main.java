@@ -2,25 +2,26 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // キーボードから身長と体重を入力
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("身長（メートル単位）を入力してください: ");
-        double height = scanner.nextDouble();
+        for(var i=0;i < 2; i++) {
+            System.out.println("i=" + i);
 
-        System.out.print("体重（キログラム単位）を入力してください: ");
-        double weight = scanner.nextDouble();
+            // キーボードから身長と体重を入力
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("身長（メートル単位）を入力してください: ");
+            double height = scanner.nextDouble();
 
-        // BMIを計算
-        double bmi = calculateBMI(height, weight);
+            System.out.print("体重（キログラム単位）を入力してください: ");
+            double weight = scanner.nextDouble();
 
-        // 結果を表示
-        System.out.println("BMIは " + bmi + " です。");
-        
-        // BMIの分類を表示
-        displayBMIClassification(bmi);
-        
-        // scannerを閉じる
-        scanner.close();
+            // BMIを計算
+            double bmi = calculateBMI(height, weight);
+
+            // 結果を表示
+            System.out.println("BMIは " + bmi + " です。");
+
+            // BMIの分類を表示
+            displayBMIClassification(bmi);
+        }
     }
 
     // BMIを計算するメソッド
